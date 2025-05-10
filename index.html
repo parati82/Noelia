@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Noelia Saravia</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  
+  <canvas id="canvas"></canvas>
+
+  <!-- TEXTO EN EL CENTRO -->
+  <div id="center-text">Noelia<br>Saravia</div>
+
+  <button id="start-btn">Toca aquí para<br>escuchar lo que te dedico❤️</button>
+
+  <!-- AUDIO -->
+  <audio autoplay loop>
+    <source src="./Noelia.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <script src="./script.js"></script>
+
+  <script>
+    const audio = document.querySelector('audio');
+    const btn = document.getElementById('start-btn');
+
+    btn.addEventListener('click', () => {
+      audio.play();
+      btn.style.display = 'none'; // Oculta el botón después de tocar
+    });
+  </script>
+</body>
+</html>

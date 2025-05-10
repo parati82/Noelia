@@ -1,0 +1,46 @@
+body {
+  background-color: #000;    
+  margin: 0;
+  overflow: hidden;
+}
+
+#start-btn {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1em 2em;
+  font-size: 1.2em;
+  background-color: rgb(39, 202, 235);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+#center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem;
+  font-family: 'Arial', sans-serif;
+  text-shadow: 0 0 10px white;
+  z-index: 10;
+  opacity: 0;
+  animation: fadeIn 3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -60%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
+}
